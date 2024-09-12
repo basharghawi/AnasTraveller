@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  @apply bg-main text-white;
+}
+
+.header-btn {
+  @apply font-semibold hover:text-gold-btn transition-all duration-300;
+}
