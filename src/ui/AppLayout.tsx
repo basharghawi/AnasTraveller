@@ -10,7 +10,7 @@ function AppLayout() {
   return (
     <>
       <Header />
-      <main className='container px-5 pt-[140px] mx-auto'>
+      <main className='pt-[117px]'>
         <Outlet/>
       </main>
     </>

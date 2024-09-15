@@ -10,6 +10,14 @@ body {
   @apply bg-main text-white;
 }
 
+img, video {
+  object-fit: cover;
+}
+
 .header-btn {
   @apply font-semibold hover:text-gold-btn transition-all duration-300;
+}
+
+.banner-gradiant::before {
+  background: linear-gradient(to top, rgba(28,35,31,1) 0%, rgba(28,35,31,0.5) 80%, rgba(28, 35, 31, 0) 100%);
 }
