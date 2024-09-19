@@ -2,7 +2,7 @@ import { faCircleChevronRight, faHeart } from "@fortawesome/free-solid-svg-icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
-import TourData from "../interfaces/TourData";
+import TourData from "../interfaces/TourData.interface";
 
 interface Props {
   content: TourData

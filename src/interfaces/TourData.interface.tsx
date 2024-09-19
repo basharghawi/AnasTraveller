@@ -1,4 +1,4 @@
-export default interface Tour {
+export default interface TourData {
   id: string;
   title: string;
   time: string;
