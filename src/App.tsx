@@ -1,9 +1,13 @@
+import { lazy, Suspense } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AppLayout from './ui/AppLayout';
-import Home from './ui/Home';
-import About from './ui/About';
-import Contact from './ui/contact';
-import Tours from './ui/Tours';
+
+// Lazy load components
+const Home = lazy(() => import('./ui/Home'));
+const About = lazy(() => import('./ui/About'));
+const Contact = lazy(() => import('./ui/contact'));
+const Tours = lazy(() => import('./ui/Tours'));
+const TourDetail = lazy(() => import('./ui/TourDetail'));
 
 const router = createBrowserRouter([
   {
@@ -13,50 +17,50 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Home />
+          </Suspense>
+        ),
       },
       {
         path: '/about',
-        element: <About />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: '/contact',
-        element: <Contact />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Contact />
+          </Suspense>
+        ),
       },
       {
         path: '/tours',
-        element: <Tours />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Tours />
+          </Suspense>
+        ),
       },
       {
         path: '/tour/:id',
-        element: <Tours />
-      }
-      // {
-      //   path: '/menu',
-      //   element: <Menu />,
-      //   loader: menuLoader,
-      //   errorElement: <Error />,
-      // },
-      // { path: '/cart', element: <Cart /> },
-      // {
-      //   path: '/order/new',
-      //   element: <CreateOrder />,
-      //   action: createOrderAction,
-      // },
-      // {
-      //   path: '/order/:orderId',
-      //   element: <Order />,
-      //   loader: orderLoader,
-      //   errorElement: <Error />,
-      // },
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <TourDetail />
+          </Suspense>
+        ),
+      },
     ],
   },
 ]);
 
 function App() {
-  return (
-    <RouterProvider router={router} />
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

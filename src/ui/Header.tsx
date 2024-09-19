@@ -14,7 +14,7 @@ function Header() {
   }
   
   return (
-    <header className='fixed w-full'>
+    <header className='fixed z-10 w-full'>
       <div className="flex items-center gap-5 justify-between bg-white py-3 px-6">
         <figure className="w-[150px]">
           <Link to="/" className="block">

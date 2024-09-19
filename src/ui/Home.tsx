@@ -1,6 +1,9 @@
+import { memo } from "react";
 import CardTour from "../features/CardTour";
+import { toursList } from "../data/tours";
 
-function Home() {
+
+const Home = memo(() => {
   return (
     <>
       <section className="relative">
@@ -19,14 +22,14 @@ function Home() {
         </h2>
         <div className="mt-7 grid grid-cols-12 gap-6">
           {
-            Array.from({length: 4}, (_, i) => (
-              <CardTour key={i} />
+            toursList.map(tour => (
+              <CardTour key={tour.id} content={tour} />
             ))
           }
         </div>
       </section>
     </>
   );
-}
+})
 
 export default Home;
