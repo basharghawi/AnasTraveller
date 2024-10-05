@@ -10,9 +10,9 @@ import "swiper/css/navigation";
 
 const TourDetail = () => {
   return (
-    <div className="container mx-auto pt-16">
-      <div className="flex items-center justify-between">
-        <h1 className="text-5xl">Wadi Rum, Jordan</h1>
+    <div className="container mx-auto pt-16 px-3">
+      <div className="flex items-center justify-between flex-col-reverse gap-y-5 md:flex-row">
+        <h1 className="text-4xl md:text-5xl">Wadi Rum, Jordan</h1>
         <div className="flex items-center gap-5">
           <Link to='/' className="text-xl text-main-light hover:underline hover:text-gold-btn">Home</Link>
           <FontAwesomeIcon icon={faChevronRight} />
@@ -24,27 +24,27 @@ const TourDetail = () => {
         slidesPerView={1}
         autoplay
         modules={[Navigation, Autoplay]}
-        className="mt-16 rounded-xl"
+        className="mt-16 rounded-xl h-[400px] md:h-[600px]"
       >
         <SwiperSlide>
-          <img className="rounded-xl w-full h-[600px]" src="https://images.unsplash.com/photo-1604413979494-eab8c4d3f68c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+          <img className="rounded-xl w-full h-full" src="https://images.unsplash.com/photo-1604413979494-eab8c4d3f68c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="rounded-xl w-full h-[600px]" src="https://images.unsplash.com/photo-1635936207353-b42e232d0e04?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+          <img className="rounded-xl w-full h-full" src="https://images.unsplash.com/photo-1635936207353-b42e232d0e04?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="rounded-xl w-full h-[600px]" src="https://images.unsplash.com/photo-1635936207825-1e49b012f2e4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+          <img className="rounded-xl w-full h-full" src="https://images.unsplash.com/photo-1635936207825-1e49b012f2e4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="rounded-xl w-full h-[600px]" src="https://images.unsplash.com/photo-1646734710313-3e64ba87722e?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+          <img className="rounded-xl w-full h-full" src="https://images.unsplash.com/photo-1646734710313-3e64ba87722e?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
         </SwiperSlide>
       </Swiper>
       <div className="mt-16">
         <div className="grid grid-cols-2 gap-6">
-          <div className="col-span-1">
+          <div className="col-span-2 md:col-span-1">
             <div className="mb-8">
-              <span className="text-4xl">Welcome to</span>
-              <h2 className="text-5xl font-bold">
+              <span className="text-3xl md:text-4xl">Welcome to</span>
+              <h2 className="text-4xl md:text-5xl font-bold">
                 Wadi Rum, Jordan
               </h2>
             </div>
@@ -59,7 +59,7 @@ const TourDetail = () => {
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </a>
           </div>
-          <div className="col-span-1 bg-slate-400">
+          <div className="col-span-2 md:col-span-1 bg-slate-400">
             map or image here
           </div>
         </div>

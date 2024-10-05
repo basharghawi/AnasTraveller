@@ -16,7 +16,7 @@ const Home = memo(() => {
           <span className="text-gold-btn">Treasures</span> with Anas
         </h1>
       </section>
-      <section className="pt-12 container mx-auto">
+      <section className="pt-12 container mx-auto px-3">
         <h2 className="text-center md:text-3xl text-lg capitalize">
           Explore Popular Destinations
         </h2>
