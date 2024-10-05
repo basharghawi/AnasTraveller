@@ -12,6 +12,8 @@ body {
 
 img, video {
   object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .header-btn {
@@ -20,4 +22,8 @@ img, video {
 
 .banner-gradiant::before {
   background: linear-gradient(to top, rgba(28,35,31,1) 0%, rgba(28,35,31,0.5) 80%, rgba(28, 35, 31, 0) 100%);
+}
+
+.swiper-button-next, .swiper-button-prev {
+  @apply !text-green-btn font-bold
 }

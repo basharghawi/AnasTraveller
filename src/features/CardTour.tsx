@@ -35,7 +35,7 @@ const CardTour: FunctionComponent<Props> = ({content}) => {
           <span className="text-2xl text-white font-medium">JOD {content.price}</span>
           /per person
         </div>
-        <Link to={'/tour/' + content.id} className="group flex items-center gap-1 hover:underline">
+        <Link to={'/tour/' + content.id} className="group flex items-center gap-2 hover:underline">
           Book Now
           <FontAwesomeIcon icon={faCircleChevronRight} className="group-hover:text-gold-btn text-green-btn transition-all duration-300" />
         </Link>
